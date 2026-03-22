@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandini Sharma | UI/UX Designer</title>
+    <meta name="description" content="Portfolio of Nandini Sharma, a passionate UI/UX Designer focusing on empathy and user-centered design.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">NS.</a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact" class="btn btn-outline nav-btn">Contact Me</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero target-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content fade-in-up">
+                    <span class="greeting">Hello, I'm</span>
+                    <h1 class="name">Nandini Sharma</h1>
+                    <h2 class="role">UI/UX Designer</h2>
+                    <p class="tagline">Crafting empathetic, intuitive, and beautiful digital experiences.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper fade-in-up delay-1">
+                    <!-- Replace with your own profile photo in the images folder! -->
+                    <img src="images/profile-photo.png" alt="Nandini Sharma" class="hero-img" onerror="this.src='https://via.placeholder.com/600x600/fdfbf7/2d3748?text=Your+Photo'">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section-padding target-section" id="about">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                <div class="about-content fade-in-up">
+                    <div class="about-card glass-card">
+                        <div class="about-icon">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <p>I am a passionate UI/UX Designer driven by <strong>empathy</strong> and a deep understanding of human behavior. My approach revolves around <strong>user-centered design</strong>, ensuring every decision I make brings value to the end user while gracefully meeting business goals.</p>
+                        <p>I believe that great design is invisible — it feels natural, intuitive, and effortlessly guides users to their goals. From uncovering user pain points to crafting polished, premium interfaces, I thrive at the intersection of psychology and aesthetics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section-padding target-section" id="skills">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Skills & Tools</h2>
+                    <p class="section-subtitle">A toolkit tailored for crafting seamless user experiences.</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- UX Skills -->
+                    <div class="skill-category glass-card fade-in-up">
+                        <div class="skill-category-header">
+                            <div class="skill-icon soft-orange"><i data-lucide="layout-template"></i></div>
+                            <h3>UX Skills</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Wireframing</li>
+                            <li>Prototyping</li>
+                            <li>User Research</li>
+                            <li>Usability Testing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Design Tools -->
+                    <div class="skill-category glass-card fade-in-up delay-1">
+                        <div class="skill-category-header">
+                            <div class="skill-icon soft-blue"><i data-lucide="pen-tool"></i></div>
+                            <h3>Design Tools</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Figma</li>
+                            <li>FigJam</li>
+                            <li>Miro</li>
+                            <li>Balsamiq</li>
+                            <li>Canva</li>
+                        </ul>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skill-category glass-card fade-in-up delay-2">
+                        <div class="skill-category-header">
+                            <div class="skill-icon soft-purple"><i data-lucide="users"></i></div>
+                            <h3>Soft Skills</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Empathy</li>
+                            <li>Communication</li>
+                            <li>Creativity</li>
+                            <li>Problem-solving</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section-padding target-section" id="projects">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Real-world problems solved through empathetic design.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project Cards generated dynamically by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section-padding target-section" id="contact">
+            <div class="container">
+                <div class="contact-card glass-card fade-in-up">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p>I'm always open to discussing product design work or partnership opportunities.</p>
+                    
+                    <div class="social-links">
+                        <a href="mailto:nandini.s0003@gmail.com" class="social-btn" aria-label="Email" target="_blank">
+                            <i data-lucide="mail"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nandini04/" class="social-btn" aria-label="LinkedIn" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.behance.net/nandinisharma111" class="social-btn" aria-label="Behance" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-behance"><path d="M6 18c2.92 0 4.67-1.55 4.67-4.17A3.6 3.6 0 0 0 8 10.3c1.76-.78 2.5-2.26 2.5-3.64C10.5 4.3 8.78 3 6 3H2v15h4ZM2 8h3.33c1.44 0 2.22-.54 2.22-1.74 0-1.28-.9-1.87-2.31-1.87H2v3.61ZM2 14h3.76c1.68 0 2.68-.69 2.68-2.06 0-1.42-1-2.12-2.73-2.12H2V14ZM16.3 9h2.38ZM13.84 14.86c0 2 1.48 3.51 3.5 3.51 1.63 0 2.8-.75 3.29-2h-1.6a1.76 1.76 0 0 1-1.68 1.1c-1.12 0-1.87-.93-1.87-2.32h5.27c.05-.28.06-.57.06-.88 0-3.13-1.74-4.88-4.5-4.88-2.58 0-4.47 1.87-4.47 4.97v.5Zm1.65-1A2.5 2.5 0 0 1 18 10.74c1.23 0 1.94.94 1.94 2.12h-4.49Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Nandini Sharma. Crafted with care.</p>
+        </div>
+    </footer>
+
+    <!-- Project Detail Modal -->
+    <div class="modal-overlay" id="project-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="modal-close" aria-label="Close modal">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-content" id="modal-content">
+                <!-- Data injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>
