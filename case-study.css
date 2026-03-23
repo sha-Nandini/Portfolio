@@ -10,10 +10,27 @@
     --cs-card-bg: #F1F1F1;
     --cs-text: #333333;
     --cs-text-light: #666666;
+    --cs-nav-bg: rgba(250, 250, 250, 0.85);
+    --cs-border: rgba(0, 0, 0, 0.05);
 
     --cs-border-radius: 16px;
     --cs-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     --cs-shadow-hover: 0 20px 40px rgba(43, 53, 63, 0.08);
+    --cs-duration: 0.3s;
+    --cs-transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.dark-mode {
+    --cs-bg: #121212;
+    --cs-primary: #fdfbf7;
+    --cs-accent: #F4A261;
+    --cs-card-bg: #1e1e1e;
+    --cs-text: #fdfbf7;
+    --cs-text-light: #a0aec0;
+    --cs-nav-bg: rgba(18, 18, 18, 0.85);
+    --cs-border: rgba(255, 255, 255, 0.1);
+    --cs-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --cs-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 body.case-study-page {
@@ -22,6 +39,7 @@ body.case-study-page {
     font-family: 'Inter', sans-serif;
     line-height: 1.7;
     overflow-x: hidden;
+    transition: background-color var(--cs-duration) var(--cs-transition), color var(--cs-duration) var(--cs-transition);
 }
 
 /* Typography */
@@ -69,10 +87,11 @@ body.case-study-page {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(250, 250, 250, 0.85);
+    background: var(--cs-nav-bg);
     backdrop-filter: blur(10px);
     z-index: 100;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--cs-border);
+    transition: all var(--cs-duration) var(--cs-transition);
 }
 
 .back-link {
@@ -119,11 +138,16 @@ body.case-study-page {
 
 .cs-bg-card {
     background-color: var(--cs-card-bg);
+    transition: background-color var(--cs-duration) var(--cs-transition);
 }
 
 .cs-bg-dark {
-    background-color: var(--cs-primary);
+    background-color: #2B353F; /* Keep dark regardless of theme */
     color: #fff;
+}
+
+.dark-mode .cs-bg-dark {
+    background-color: #0d0d0d;
 }
 
 .cs-two-col {
@@ -187,13 +211,15 @@ body.case-study-page {
 }
 
 .cs-tag {
-    background: #fff;
+    background: var(--cs-bg);
     padding: 0.5rem 1.25rem;
     border-radius: 50px;
     font-weight: 500;
     font-size: 0.95rem;
     color: var(--cs-primary);
     box-shadow: var(--cs-shadow);
+    border: 1px solid var(--cs-border);
+    transition: all var(--cs-duration) var(--cs-transition);
 }
 
 /* Grids */
@@ -228,11 +254,12 @@ body.case-study-page {
 .cs-card,
 .cs-feature-card,
 .cs-stat-card {
-    background: #fff;
+    background: var(--cs-card-bg);
     padding: 2.5rem;
     border-radius: var(--cs-border-radius);
     box-shadow: var(--cs-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color var(--cs-duration) var(--cs-transition);
+    border: 1px solid var(--cs-border);
 }
 
 .cs-stat-card {
@@ -510,7 +537,7 @@ body.case-study-page {
 }
 
 .theme-littleleap .cs-hero-overlay.theme-overlay {
-    background: linear-gradient(to right, rgba(107, 175, 175, 0.95) 0%, rgba(107, 175, 175, 0.4) 100%);
+    background: linear-gradient(to right, rgba(107, 175, 175, 0.8) 0%, rgba(107, 175, 175, 0.3) 100%);
 }
 
 .theme-littleleap .ll-hero-bg {
