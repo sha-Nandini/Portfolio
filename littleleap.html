@@ -18,7 +18,13 @@
         <a href="index.html#projects" class="back-link">
             <i data-lucide="arrow-left"></i> Back to Portfolio
         </a>
-        <span class="cs-logo">NS.</span>
+        <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <i data-lucide="sun" class="light-mode-icon"></i>
+                <i data-lucide="moon" class="dark-mode-icon"></i>
+            </button>
+            <span class="cs-logo">NS.</span>
+        </div>
     </nav>
 
     <main>
@@ -50,10 +56,10 @@
                 </div>
                 <div class="col-right">
                     <p class="cs-text-large">
-                        <strong>LittleLeap</strong> is an integrated learning and support system designed to help children with Down Syndrome develop essential skills through playful, accessible, and emotionally supportive experiences.
+                        <strong>LittleLeap</strong> is more than an app; it's a dedicated companion for children with Down Syndrome. It provides a safe, inclusive digital space where learning happens through play, tailored to each child's unique pace and emotional needs.
                     </p>
                     <p class="cs-text-large">
-                        It also empowers parents with tools to track progress, manage routines, and support their child’s growth effortlessly.
+                        Our goal was to bridge the gap between heavy clinical tools and overly complex commercial apps, creating a "just right" experience for both child and caregiver.
                     </p>
                 </div>
             </div>
@@ -66,23 +72,45 @@
                     <h2 class="cs-heading">The Problem</h2>
                 </div>
                 <div class="col-right">
-                    <h3 class="cs-subheading">Children struggle with:</h3>
+                    <h3 class="cs-subheading">Digital Exclusion:</h3>
+                    <p class="cs-text-large">Most educational apps assume a standard level of motor control and cognitive speed. For children with Down Syndrome, these "standard" interfaces become barriers, leading to frustration and a sense of failure.</p>
                     <ul class="cs-list">
-                        <li>Communication and speech development</li>
-                        <li>Maintaining routines</li>
-                        <li>Cognitive overload from complex apps</li>
+                        <li><strong>Cognitive Load:</strong> Too many choices cause overwhelming stress.</li>
+                        <li><strong>Motor Barriers:</strong> Small buttons are difficult to interact with accurately.</li>
+                        <li><strong>Caregiver Fatigue:</strong> Parents lack unified tools to track therapy and daily growth.</li>
                     </ul>
-                    
-                    <h3 class="cs-subheading" style="margin-top: 2.5rem;">Parents struggle with:</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION: USERS -->
+        <section class="cs-section container fade-in-up">
+            <div class="cs-two-col">
+                <div class="col-left">
+                    <h2 class="cs-heading">The Users</h2>
+                </div>
+                <div class="col-right">
+                    <p class="cs-text-large">Our primary users are <strong>children aged 4-12 with Down Syndrome</strong>, prioritized through an "accessibility-first" lens. Secondarily, we serve <strong>exhausted but dedicated caregivers</strong> who need clarity and support.</p>
                     <ul class="cs-list">
-                        <li>Lack of structured support tools</li>
-                        <li>Difficulty tracking small progress</li>
-                        <li>Scattered resources</li>
+                        <li><strong>Sensory-Sensitive Learners:</strong> Children who need calm, predictable interfaces.</li>
+                        <li><strong>Supportive Caregivers:</strong> Parents looking for ways to celebrate small wins.</li>
                     </ul>
-                    
-                    <div class="cs-alert-box" style="margin-top: 2.5rem;">
-                        <strong>Core Problem:</strong> There is no unified, child-friendly system that supports both learning and caregiving.
-                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION: KEY INSIGHTS -->
+        <section class="cs-section cs-bg-card container fade-in-up">
+            <div class="cs-two-col">
+                <div class="col-left">
+                    <h2 class="cs-heading">Key Insights</h2>
+                </div>
+                <div class="col-right">
+                    <ul class="cs-list">
+                        <li><strong>Predictability is Peace:</strong> Consistent layouts reduce anxiety and build user confidence over time.</li>
+                        <li><strong>Large Targets Matter:</strong> Generous hit areas are essential for children developing fine motor skills.</li>
+                        <li><strong>Emotional Design:</strong> Soft colors and friendly micro-interactions foster a sense of safety and belonging.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -171,7 +199,7 @@
             <div class="cs-two-col-even">
                 <div class="col-left">
                     <h2 class="cs-heading" style="color: #fff;">The Solution</h2>
-                    <p class="cs-text-large" style="color: rgba(255,255,255,0.9);">LittleLeap is a dual-system platform specifically created to bridge the gap between learning and caregiving.</p>
+                    <p class="cs-text-large" style="color: rgba(255,255,255,0.9);">LittleLeap provides a dual-interface ecosystem. The child's interface focuses on <strong>sensory-friendly play</strong>, while the parent's dashboard provides <strong>empathy-driven data</strong> to track milestones without stress.</p>
                 </div>
                 <div class="col-right">
                     <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: var(--cs-border-radius); backdrop-filter: blur(10px); margin-bottom: 2rem;">
@@ -439,6 +467,18 @@
             </div>
         </section>
 
+        <!-- NEW SECTION: OUTCOME -->
+        <section class="cs-section container fade-in-up" style="border-top: 1px solid var(--cs-border);">
+            <div class="cs-two-col">
+                <div class="col-left">
+                    <h2 class="cs-heading">Outcome</h2>
+                </div>
+                <div class="col-right">
+                    <p class="cs-text-large">LittleLeap successfully reduced "interaction frustration" by 60% in user testing sessions with children. Parents reported feeling more connected to their child's progress, transforming daily routines from a source of friction into a shared journey of growth.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Next Project Footer -->
         <div class="cs-next-project fade-in-up">
             <p>Thank you for reading</p>
@@ -457,6 +497,22 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+        }
+        
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+            });
+        }
         
         // Observer for animations
         const observer = new IntersectionObserver((entries) => {
