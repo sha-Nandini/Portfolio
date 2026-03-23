@@ -5,6 +5,7 @@ const projectsData = [
         title: 'Local Lens',
         image: 'images/local lens cover final.png',
         link: 'local-lens.html',
+        figmaLink: 'https://www.figma.com/design/gJixBw0OeMaA9JHAdKIA7a/CSU-302-Local-Lens?node-id=0-1&t=DNBV47AONrCLrvgN-1',
         description: 'A community-driven app helping users discover hidden local businesses and cultural spots.',
         problem: 'Local businesses struggle with visibility against large chains, and users find it hard to discover authentic local experiences.',
         users: 'Explorers, tourists, and locals aged 18-45 looking for unique experiences.',
@@ -17,6 +18,7 @@ const projectsData = [
         title: 'LittleLeap',
         image: 'images/littleleap front.png',
         link: 'littleleap.html', // Dedicated case study page
+        figmaLink: 'https://www.figma.com/design/Q2eXOjvVAxIOCTHGwurbTB/DS-UI?node-id=0-1&t=w3MxL1odOfaFZKTw-1',
         description: 'An integrated learning and support system specifically designed for children with Down Syndrome and to help their parents manage daily routines.',
         problem: 'Parents find it difficult to keep young children engaged in screen-time that is actually educational and not just entertaining.',
         users: 'Children aged 4-8 and their parents/guardians.',
@@ -28,6 +30,7 @@ const projectsData = [
         id: 'innerease',
         title: 'InnerEase',
         image: 'images/inner ease cover.png',
+        figmaLink: 'https://www.figma.com/design/bMm1PzxYoWQs1AODjSX9bB/STP-mental-health?node-id=227-6&t=MALVowFLBYMcsQLd-1',
         description: 'A mental wellness companion app focusing on daily check-ins, meditation, and cognitive behavioral exercises.',
         problem: 'Existing mental health apps feel overwhelming and clinical, deterring users from building a consistent daily habit.',
         users: 'Working professionals and students experiencing stress and anxiety.',
@@ -117,7 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-desc">${project.description}</p>
                 <div class="project-card-footer">
-                    View Case Study <i data-lucide="arrow-right"></i>
+                    <span class="view-case-study">View Case Study <i data-lucide="arrow-right"></i></span>
+                    ${project.figmaLink ? `<a href="${project.figmaLink}" target="_blank" class="figma-card-btn" title="View Figma Design"><i data-lucide="figma"></i> Figma</a>` : ''}
                 </div>
             </div>
         `;
@@ -130,6 +134,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 openModal(project);
             }
         });
+
+        // Prevent Figma link from triggering card click
+        const figmaBtn = card.querySelector('.figma-card-btn');
+        if (figmaBtn) {
+            figmaBtn.addEventListener('click', (e) => e.stopPropagation());
+        }
         
         projectsGrid.appendChild(card);
         
@@ -163,6 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
             <div class="modal-body-grid">
+                <div class="modal-section" style="grid-column: 1 / -1;">
+                    ${project.figmaLink ? `<a href="${project.figmaLink}" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;"><i data-lucide="figma"></i> View Figma Design</a>` : ''}
+                </div>
                 <div class="modal-section">
                     <h4><i data-lucide="target"></i> Problem</h4>
                     <p>${project.problem}</p>
