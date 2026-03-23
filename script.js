@@ -3,7 +3,7 @@ const projectsData = [
     {
         id: 'local-lens',
         title: 'Local Lens',
-        image: 'images/local lens cover final.png',
+        image: 'images/local final cover.png',
         link: 'local-lens.html',
         figmaLink: 'https://www.figma.com/design/gJixBw0OeMaA9JHAdKIA7a/CSU-302-Local-Lens?node-id=0-1&t=DNBV47AONrCLrvgN-1',
         description: 'A community-driven app helping users discover hidden local businesses and cultural spots.',
@@ -11,65 +11,83 @@ const projectsData = [
         users: 'Explorers, tourists, and locals aged 18-45 looking for unique experiences.',
         solution: 'An intuitive platform that bridges the gap between hidden gems and curious explorers through community-curated content.',
         features: ['Location-based curation', 'Community reviews & stories', 'Interactive neighborhood maps', 'Bookmark & plan itineraries'],
-        process: 'Began with user interviews -> Competitor analysis -> Wireframing -> High-fidelity prototyping in Figma -> Usability testing.'
+        process: 'Began with user interviews -> Competitor analysis -> Wireframing -> High-fidelity prototyping in Figma -> Usability testing.',
+        tags: ['UX Research', 'UI Design']
     },
     {
         id: 'littleleap',
         title: 'LittleLeap',
-        image: 'images/littleleap front.png',
+        image: 'images/little final cover.png',
         link: 'littleleap.html', // Dedicated case study page
         figmaLink: 'https://www.figma.com/design/Q2eXOjvVAxIOCTHGwurbTB/DS-UI?node-id=0-1&t=w3MxL1odOfaFZKTw-1',
-        description: 'An integrated learning and support system specifically designed for children with Down Syndrome and to help their parents manage daily routines.',
+        description: 'An integrated learning and support system specifically designed for children with Down Syndrome.',
         problem: 'Parents find it difficult to keep young children engaged in screen-time that is actually educational and not just entertaining.',
         users: 'Children aged 4-8 and their parents/guardians.',
         solution: 'A gamified learning experience that uses storytelling to teach foundational concepts in math, language, and logic.',
         features: ['Interactive storyboards', 'Progress tracking for parents', 'Reward system (badges)', 'Child-friendly UI with large touch targets'],
-        process: 'Observational research with kids -> Persona creation -> Card sorting for IA -> UI design focusing on accessibility and bright, soft colors.'
+        process: 'Observational research with kids -> Persona creation -> Card sorting for IA -> UI design focusing on accessibility and bright, soft colors.',
+        tags: ['Inclusive Design', 'EdTech']
+    },
+    {
+        id: 'flask-blog',
+        title: 'Flask Blog Web App',
+        image: 'images/blog app cover.png',
+        description: 'A full-featured blog application built with Flask, featuring user authentication and post management.',
+        problem: 'Building a scalable and secure blogging platform from scratch requires robust backend logic.',
+        users: 'Bloggers and developers looking for a clean, functional web app.',
+        solution: 'Implemented a CRUD-based blog with SQLAlchemy, Flask-Login, and responsive Jinja2 templates.',
+        features: ['User Registration/Login', 'CRUD for blog posts', 'Account profiles', 'Pagination and search'],
+        process: 'Schema design -> Backend development with Flask -> Frontend integration -> Deployment.',
+        tags: ['Full Stack', 'Web Dev']
     },
     {
         id: 'innerease',
         title: 'InnerEase',
         image: 'images/inner ease cover.png',
         figmaLink: 'https://www.figma.com/design/bMm1PzxYoWQs1AODjSX9bB/STP-mental-health?node-id=227-6&t=MALVowFLBYMcsQLd-1',
-        description: 'A mental wellness companion app focusing on daily check-ins, meditation, and cognitive behavioral exercises.',
+        description: 'A mental wellness companion app focusing on daily check-ins and meditation.',
         problem: 'Existing mental health apps feel overwhelming and clinical, deterring users from building a consistent daily habit.',
         users: 'Working professionals and students experiencing stress and anxiety.',
         solution: 'A calming, minimalist app that uses conversational UI to guide users through daily check-ins and tailored mindfulness exercises.',
         features: ['Mood tracking', 'Guided audio meditations', 'Journaling prompts', 'Crisis resource integration'],
-        process: 'Empathy mapping -> User journey mapping -> Low-fi wireframing -> High-fidelity design focusing on soft muted colors to evoke calmness.'
+        process: 'Empathy mapping -> User journey mapping -> Low-fi wireframing -> High-fidelity design focusing on soft muted colors to evoke calmness.',
+        tags: ['Mental Health', 'UI Design']
     },
     {
         id: 'zara-redesign',
         title: 'Zara Redesign',
         image: 'images/zara cover.png',
-        description: 'An unofficial UX case study redesigning the Zara mobile application to improve navigation and checkout flow.',
+        description: 'An unofficial UX case study redesigning the Zara mobile application to improve navigation.',
         problem: 'The current app prioritizes editorial aesthetic over usability, leading to high cart abandonment rates and navigation confusion.',
         users: 'Frequent online shoppers and fashion enthusiasts.',
         solution: 'A streamlined redesign that balances Zara\'s premium editorial feel with standard e-commerce UX patterns for better usability.',
         features: ['Refined category navigation', 'Quick add-to-cart from feed', 'Simplified checkout process', 'Enhanced product filtering'],
-        process: 'Heuristic evaluation -> Usability testing of current app -> Information Architecture overhaul -> Figma prototyping.'
+        process: 'Heuristic evaluation -> Usability testing of current app -> Information Architecture overhaul -> Figma prototyping.',
+        tags: ['Case Study', 'E-commerce']
     },
     {
         id: 'styleup',
         title: 'StyleUp',
         image: 'images/styleup cover.png',
-        description: 'A virtual wardrobe and outfit planner that suggests daily looks based on local weather and calendar events.',
+        description: 'A virtual wardrobe and outfit planner that suggests daily looks based on weather.',
         problem: 'Users spend too much time deciding what to wear daily, often forgetting what items they own.',
         users: 'Fashion-conscious individuals and busy professionals.',
         solution: 'A smart assistant that digitizes wardrobes and intelligently combines pieces based on context.',
         features: ['AI outfit generation', 'Weather API integration', 'Calendar sync', 'Virtual closet organization'],
-        process: 'Diary studies -> Feature prioritization -> Wireframing -> Interaction design -> Iterative testing.'
+        process: 'Diary studies -> Feature prioritization -> Wireframing -> Interaction design -> Iterative testing.',
+        tags: ['Product Design', 'AI']
     },
     {
         id: 'petease',
         title: 'PetEase',
         image: 'images/petease cover.png',
-        description: 'An all-in-one pet care management dashboard connecting pet owners with vets, groomers, and daily care trackers.',
+        description: 'An all-in-one pet care management dashboard connecting owners with providers.',
         problem: 'Managing a pet\'s medical history, appointments, and daily routines spans across multiple mediums, leading to disorganization.',
         users: 'Pet owners, specifically those with multiple pets or pets with medical conditions.',
         solution: 'A centralized hub for all pet care needs, making tracking and booking seamless.',
         features: ['Medical record storage', 'Appointment scheduling', 'Diet & medication reminders', 'Provider directory'],
-        process: 'Surveys -> User flows -> Mid-fi prototyping -> High-fi design with approachable typography.'
+        process: 'Surveys -> User flows -> Mid-fi prototyping -> High-fi design with approachable typography.',
+        tags: ['Management', 'App Design']
     }
 ];
 
@@ -99,8 +117,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Populate Projects
     const projectsGrid = document.querySelector('.projects-grid');
-    
-    projectsData.forEach((project, index) => {
+    const viewAllBtn = document.getElementById('view-all-projects');
+    let showingAll = false;
+
+    function createCard(project, index) {
         // Calculate delay for staggered animation
         const delayClass = index % 3 === 1 ? 'delay-1' : index % 3 === 2 ? 'delay-2' : '';
         
@@ -112,21 +132,27 @@ document.addEventListener('DOMContentLoaded', () => {
             ? `<img src="${project.image}" alt="${project.title}" class="project-img">`
             : `<i data-lucide="image"></i>`;
 
+        const tagsHtml = project.tags ? project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('') : '';
+
         card.innerHTML = `
             <div class="project-image-wrapper">
                 ${imageContent}
             </div>
             <div class="project-content">
+                <div class="project-tags">${tagsHtml}</div>
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-desc">${project.description}</p>
                 <div class="project-card-footer">
-                    <span class="view-case-study">View Case Study <i data-lucide="arrow-right"></i></span>
-                    ${project.figmaLink ? `<a href="${project.figmaLink}" target="_blank" class="figma-card-btn" title="View Figma Design"><i data-lucide="figma"></i> Figma</a>` : ''}
+                    <span class="view-link">View Case Study <i data-lucide="arrow-right"></i></span>
+                    ${project.figmaLink ? `
+                        <a href="${project.figmaLink}" target="_blank" class="figma-icon-btn" title="View Figma Design">
+                            <i data-lucide="figma"></i>
+                        </a>` : ''}
                 </div>
             </div>
         `;
         
-        // Add click listener to open modal or navigate directly
+        // Add click listener
         card.addEventListener('click', () => {
             if (project.link) {
                 window.location.href = project.link;
@@ -136,19 +162,53 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Prevent Figma link from triggering card click
-        const figmaBtn = card.querySelector('.figma-card-btn');
+        const figmaBtn = card.querySelector('.figma-icon-btn');
         if (figmaBtn) {
             figmaBtn.addEventListener('click', (e) => e.stopPropagation());
         }
         
-        projectsGrid.appendChild(card);
-        
-        // Ensure the newly created card is observed for the scroll animation
-        observer.observe(card);
-    });
-    
-    // Re-initialize icons for newly added HTML
-    lucide.createIcons();
+        return card;
+    }
+
+    function renderInitialProjects() {
+        projectsGrid.innerHTML = '';
+        projectsData.slice(0, 3).forEach((project, index) => {
+            const card = createCard(project, index);
+            projectsGrid.appendChild(card);
+            observer.observe(card);
+        });
+        lucide.createIcons();
+    }
+
+    function renderAllProjects() {
+        // Only render the remaining projects to maintain entrance animations
+        projectsData.slice(3).forEach((project, index) => {
+            const card = createCard(project, index + 3);
+            projectsGrid.appendChild(card);
+            observer.observe(card);
+        });
+        lucide.createIcons();
+        if (viewAllBtn) viewAllBtn.textContent = 'Show Less';
+    }
+
+    if (projectsGrid) {
+        renderInitialProjects();
+    }
+
+    if (viewAllBtn) {
+        viewAllBtn.addEventListener('click', () => {
+            if (!showingAll) {
+                renderAllProjects();
+                showingAll = true;
+            } else {
+                renderInitialProjects();
+                showingAll = false;
+                viewAllBtn.textContent = 'View All Projects';
+                // Scroll back to project section top for better UX
+                document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
 
     // 4. Modal Logic
     const modal = document.getElementById('project-modal');
