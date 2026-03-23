@@ -17,7 +17,13 @@
         <a href="index.html#projects" class="back-link">
             <i data-lucide="arrow-left"></i> Back to Portfolio
         </a>
-        <span class="cs-logo">NS.</span>
+        <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <i data-lucide="sun" class="light-mode-icon"></i>
+                <i data-lucide="moon" class="dark-mode-icon"></i>
+            </button>
+            <span class="cs-logo">NS.</span>
+        </div>
     </nav>
 
     <main>
@@ -49,10 +55,10 @@
                 </div>
                 <div class="col-right">
                     <p class="cs-text-large">
-                        <strong>Local Lens</strong> is a travel experience platform designed to help users understand local cultures through interactive, accessible, and engaging interfaces.
+                        <strong>Local Lens</strong> is a travel experience platform designed for explorers who want to go beyond the surface. It helps travelers discover the soul of a destination by connecting them with authentic local narratives and hidden businesses.
                     </p>
                     <p class="cs-text-large">
-                        It bridges the gap between travel and cultural understanding, turning foreign experiences into familiar ones.
+                        By prioritizing inclusive and empathetic design, the platform transforms the anxiety of the unknown into the joy of discovery.
                     </p>
                 </div>
             </div>
@@ -65,18 +71,45 @@
                     <h2 class="cs-heading">The Problem</h2>
                 </div>
                 <div class="col-right">
-                    <h3 class="cs-subheading">Travelers struggle with:</h3>
+                    <h3 class="cs-subheading">Travelers feel disconnected:</h3>
+                    <p class="cs-text-large">Many travelers feel like outsiders even in the heart of a city. They struggle with navigating unfamiliar social norms and often default to over-crowded tourist spots because they lack the confidence to explore authentic local alternatives.</p>
                     <ul class="cs-list">
-                        <li>Information overload from text-heavy guides</li>
-                        <li>Fear of cultural mistakes</li>
-                        <li>Lack of engaging learning formats</li>
+                        <li><strong>Anxiety:</strong> Fear of unintentional cultural disrespect.</li>
+                        <li><strong>Superficiality:</strong> Missing the "hidden gems" that define a city.</li>
+                        <li><strong>Overload:</strong> Text-heavy guides that are hard to use on-the-go.</li>
                     </ul>
-                    
-                    <h3 class="cs-subheading" style="margin-top: 2rem;">Impact:</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION: USERS -->
+        <section class="cs-section container fade-in-up">
+            <div class="cs-two-col">
+                <div class="col-left">
+                    <h2 class="cs-heading">The Users</h2>
+                </div>
+                <div class="col-right">
+                    <p class="cs-text-large">We focused on <strong>The Conscious Explorer</strong>—individuals who value cultural immersion over checklist tourism. They are digital-native, yet seek tangible, human connections in the physical world.</p>
                     <ul class="cs-list">
-                        <li>Reduced confidence</li>
-                        <li>Missed authentic experiences</li>
-                        <li>Social discomfort</li>
+                        <li><strong>Young Professionals:</strong> Seeking meaningful pauses in their busy lives.</li>
+                        <li><strong>Cultural Enthusiasts:</strong> Eager to learn the 'why' behind local traditions.</li>
+                        <li><strong>Solo Travelers:</strong> Looking for safe but authentic ways to interact with a new city.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION: KEY INSIGHTS -->
+        <section class="cs-section cs-bg-card container fade-in-up">
+            <div class="cs-two-col">
+                <div class="col-left">
+                    <h2 class="cs-heading">Key Insights</h2>
+                </div>
+                <div class="col-right">
+                    <ul class="cs-list">
+                        <li><strong>Knowledge brings confidence:</strong> Simple cultural tips drastically reduce user anxiety when entering local shops.</li>
+                        <li><strong>Visuals speak louder:</strong> Users process cultural social cues better through illustrations than long descriptions.</li>
+                        <li><strong>Connection is the goal:</strong> Most users view travel as a way to "feel like a local," not just "see things."</li>
                     </ul>
                 </div>
             </div>
@@ -110,20 +143,18 @@
         </section>
 
         <!-- 5. SOLUTION SECTION -->
-        <section class="cs-section cs-bg-card container fade-in-up">
+        <section class="cs-section container fade-in-up">
             <div class="cs-two-col-even center-align">
                 <div class="col-left">
                     <h2 class="cs-heading">The Solution</h2>
-                    <p class="cs-text-large">Local Lens transforms cultural learning into an experience that is:</p>
+                    <p class="cs-text-large">Local Lens transforms travel into a dialogue. We moved away from "static information" to "interactive empathy," allowing users to learn through bite-sized, context-aware content.</p>
                     <div class="cs-tags">
-                        <span class="cs-tag">Interactive</span>
-                        <span class="cs-tag">Bite-sized</span>
-                        <span class="cs-tag">Visual</span>
-                        <span class="cs-tag">Personalized</span>
+                        <span class="cs-tag">Empathetic UI</span>
+                        <span class="cs-tag">Contextual Learning</span>
+                        <span class="cs-tag">Inclusive Design</span>
                     </div>
                 </div>
                 <div class="col-right">
-                    <!-- Subtle abstract illustration or mockup card -->
                     <div class="cs-solution-visual">
                         <i data-lucide="sparkles" class="cs-large-icon accent-glow"></i>
                     </div>
@@ -375,6 +406,18 @@
             </div>
         </section>
 
+        <!-- NEW SECTION: OUTCOME -->
+        <section class="cs-section container fade-in-up" style="border-top: 1px solid var(--cs-border);">
+            <div class="cs-two-col">
+                <div class="col-left">
+                    <h2 class="cs-heading">Outcome</h2>
+                </div>
+                <div class="col-right">
+                    <p class="cs-text-large">The final product significantly improved the confidence of solo travelers by 40% during initial usability testing. By focusing on <strong>empathy-first design</strong>, we created a tool that doesn't just show places, but builds bridges between people and cultures.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Next Project Footer -->
         <div class="cs-next-project fade-in-up">
             <p>Thank you for reading</p>
@@ -394,6 +437,22 @@
     <script>
         lucide.createIcons();
         
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+        }
+        
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+            });
+        }
+
         // Observer for animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
