@@ -31,7 +31,7 @@ const projectsData = [
     {
         id: 'django-blog',
         title: 'Django Blog Web Application',
-        image: 'images/blog app cover.png',
+        image: 'images/django cover.png',
         liveLink: 'https://django-blog-5xxe.onrender.com/',
         githubLink: 'https://github.com/sha-Nandini/Django-blog-app', // Added based on context
         description: 'A full-featured blog application built with Django, featuring user authentication and post management.',
