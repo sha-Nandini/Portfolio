@@ -3,7 +3,7 @@ const projectsData = [
     {
         id: 'local-lens',
         title: 'Local Lens',
-        image: 'images/local final cover.png',
+        image: 'images/local%20final%20cover.png',
         link: 'local-lens.html',
         figmaLink: 'https://www.figma.com/design/gJixBw0OeMaA9JHAdKIA7a/CSU-302-Local-Lens?node-id=0-1&t=DNBV47AONrCLrvgN-1',
         description: 'Helping users discover meaningful local experiences',
@@ -17,7 +17,7 @@ const projectsData = [
     {
         id: 'littleleap',
         title: 'LittleLeap',
-        image: 'images/little final cover.png',
+        image: 'images/little%20final%20cover.png',
         link: 'littleleap.html', // Dedicated case study page
         figmaLink: 'https://www.figma.com/design/Q2eXOjvVAxIOCTHGwurbTB/DS-UI?node-id=0-1&t=w3MxL1odOfaFZKTw-1',
         description: 'Designing inclusive solutions for children with Down Syndrome',
@@ -45,7 +45,7 @@ const projectsData = [
     {
         id: 'innerease',
         title: 'InnerEase',
-        image: 'images/inner ease cover.png',
+        image: 'images/inner%20ease%20cover.png',
         figmaLink: 'https://www.figma.com/design/bMm1PzxYoWQs1AODjSX9bB/STP-mental-health?node-id=227-6&t=MALVowFLBYMcsQLd-1',
         description: 'Creating accessible mental health support experiences',
         problem: 'Mental wellness apps often feel clinical or overwhelming, making it difficult for users to maintain consistent mindfulness habits during stressful periods.',
@@ -64,7 +64,7 @@ const projectsData = [
     {
         id: 'zara-redesign',
         title: 'Zara Redesign',
-        image: 'images/zara cover.png',
+        image: 'images/zara%20cover.png',
         description: 'An unofficial UX case study redesigning the Zara mobile application to improve navigation.',
         problem: 'The current app prioritizes editorial aesthetic over usability, leading to high cart abandonment rates and navigation confusion.',
         users: 'Frequent online shoppers and fashion enthusiasts.',
@@ -77,7 +77,7 @@ const projectsData = [
     {
         id: 'styleup',
         title: 'StyleUp',
-        image: 'images/styleup cover.png',
+        image: 'images/styleup%20cover.png',
         description: 'A virtual wardrobe and outfit planner that suggests daily looks based on weather.',
         problem: 'Users spend too much time deciding what to wear daily, often forgetting what items they own.',
         users: 'Fashion-conscious individuals and busy professionals.',
@@ -90,7 +90,7 @@ const projectsData = [
     {
         id: 'petease',
         title: 'PetEase',
-        image: 'images/petease cover.png',
+        image: 'images/petease%20cover.png',
         description: 'An all-in-one pet care management dashboard connecting owners with providers.',
         problem: 'Managing a pet\'s medical history, appointments, and daily routines spans across multiple mediums, leading to disorganization.',
         users: 'Pet owners, specifically those with multiple pets or pets with medical conditions.',
