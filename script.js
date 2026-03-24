@@ -31,7 +31,7 @@ const projectsData = [
     {
         id: 'django-blog',
         title: 'Django Blog Web Application',
-        image: 'images/django cover.png',
+        image: 'images/django-cover.png',
         liveLink: 'https://django-blog-5xxe.onrender.com/',
         githubLink: 'https://github.com/sha-Nandini/Django-blog-app', // Added based on context
         description: 'A full-featured blog application built with Django, featuring user authentication and post management.',
@@ -360,16 +360,25 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.add('dark-mode');
     }
 
+    // Theme-specific profile photo logic
+    const heroProfileImg = document.getElementById('hero-profile-img');
+    function updateProfilePhoto(isDark) {
+        if (heroProfileImg) {
+            heroProfileImg.src = isDark ? 'images/profile-photo-dark.png' : 'images/profile-photo.png';
+        }
+    }
+
+    // Set initial profile photo based on saved theme
+    updateProfilePhoto(body.classList.contains('dark-mode'));
+
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
 
-            // Save preference
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
+            // Save preference and update photo
+            const isDark = body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateProfilePhoto(isDark);
         });
     }
 });
